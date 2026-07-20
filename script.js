@@ -2,7 +2,7 @@
 
 window.onload = () => {
     
-    // Elements
+    // Elements 
     const loadContainer = document.getElementById('loading-container');
     const gameContainer = document.getElementById('game-container');
     const mainSurprise = document.getElementById('main-surprise');
