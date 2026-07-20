@@ -1,0 +1,155 @@
+ body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffeef2; /* Soft Pink Base */
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.active {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Phase 1: Loading/Troll Style */
+#loading-container {
+    background-color: #222;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+
+.loader {
+    border: 16px solid #333;
+    border-top: 16px solid #ff4d88;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin-bottom: 30px;
+}
+
+#loading-text { font-size: 2em; margin-bottom: 20px; }
+#troll-message { color: #fcc; font-size: 1.2em; max-width: 80%; }
+
+#patience-btn {
+    background-color: #ff4d88;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: transform 0.2s;
+}
+#patience-btn:hover { transform: scale(1.1); }
+
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Phase 2: Game Style */
+#game-container {
+    background-color: #fff;
+    color: #ff4d88;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#letters-container {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.letter {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    cursor: grab;
+    user-select: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.letter.dragging { opacity: 0.5; }
+.letter:nth-child(odd) { background-color: #ff6f91; }
+.letter:nth-child(even) { background-color: #ff9eaf; }
+
+#unlock-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+/* Phase 3: Main Surprise Style */
+#main-surprise {
+    background: linear-gradient(135deg, #ff9eaf 0%, #ffeef2 100%);
+    min-height: 100vh;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.glow-text {
+    color: #fff;
+    font-size: 4em;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.wish-text { font-size: 1.8em; color: #ff3366; font-weight: 600; margin-bottom: 40px; }
+
+.main-card {
+    display: inline-block;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 20px;
+    max-width: 90%;
+    margin-bottom: 50px;
+}
+
+.birthday-girl-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid #ffeef2;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+.love-box { background-color: #ffeef2; padding: 20px; border-radius: 20px; color: #ff3366; font-style: italic; font-size: 1.3em; line-height: 1.6; }
+
+#cake-area { margin-bottom: 50px; }
+#cake { font-size: 8em; animation: bounce 2s infinite; }
+#blow-candle-btn {
+    background-color: #f44336; color: white; padding: 10px 20px; border: none; border-radius: 15px; cursor: pointer; margin-top: 10px;
+}
+
+#gift-reveal-btn {
+    background-color: #333; color: white; padding: 15px 30px; border: none; border-radius: 25px; cursor: pointer; font-size: 1.2em; margin-bottom: 30px;
+}
+#final-gift-reveal { font-size: 1.3em; background: #fff; padding: 20px; border-radius: 20px; color: #555; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+@keyframes glow { from { text-shadow: 0 0 10px #fff; } to { text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff; } }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
