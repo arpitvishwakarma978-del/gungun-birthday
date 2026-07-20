@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wait for it, Gungun! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Pareshan Karne Wala Page (Phase 1) -->
+    <div id="loading-container" class="active">
+        <div class="loader"></div>
+        <h1 id="loading-text">Loading Gungun's patience level... Please wait.</h1>
+        <button id="patience-btn" class="hidden">Click when you are bored!</button>
+        <p id="troll-message" class="hidden"></p>
+    </div>
+
+    <!-- The Puzzle Game (Phase 2) -->
+    <div id="game-container" class="hidden">
+        <h2>Patience was good, but are you smart enough?</h2>
+        <p id="hint">Arrange my name backwards to unlock the real surprise!</p>
+        <div id="letters-container"></div>
+        <button id="unlock-btn">Unlock Surprise</button>
+    </div>
+
+    <!-- Main Surprise Content (Phase 3) -->
+    <div id="main-surprise" class="hidden">
+        <div id="confetti-overlay"></div>
+        <div id="content-wrap">
+            <h1 class="glow-text">HAPPY BIRTHDAY, GUNGUN! 🎉</h1>
+            <p class="wish-text">Mere pyaare overthinker ko birthday mubarak!</p>
+            
+            <div class="main-card">
+                <img src="birthday-girl.jpg" alt="The Birthday Girl" class="birthday-girl-img">
+                <div class="love-box">
+                    <p class="love-quote">"Always remember, you don't need to overthink... I've got your back! Just relax and enjoy being the best sis in the world."</p>
+                </div>
+            </div>
+
+            <div id="cake-area">
+                <div id="cake">🎂</div>
+                <button id="blow-candle-btn">Blow Candle 🕯️</button>
+            </div>
+            
+            <button id="gift-reveal-btn">Click for Your Final Gift</button>
+            <div id="final-gift-reveal" class="hidden">
+                <p>Ab overthink mat karna, gift tera Instagram DM par bhej diya hai! Go check it! 😉</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
